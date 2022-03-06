@@ -1,0 +1,22 @@
+.number-plate {
+    background-color: white;
+    padding: 5px 5px;
+    border: 10x;
+    border-color: red;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.feedback {
+    margin-top: 20px;
+}
+
+.feedback label {
+    color: red;
+    font-weight: bold;
+}
+
+input:focus {
+    background-color: yellow;
+}
