@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Lektier</title>
+</head>
+<body>
+    <div id="myList">
+    <ul>
+        <li>http://dr.dk</li>
+        <li>http://tv2.dk</li>
+        <li>Hello World!</li>
+        <li>http://eamv.dk</li>
+      </ul>
+    </div>
+    <script>
+
+var litl = {
+      init: function () {
+        var litlDiv = document.getElementById('myList');
+        
+        var listItems = litlDiv.getElementsByTagName('li');
+
+        for (var i = 0; i < listItems.length; i++) {
+          var li = listItems[i];
+          var text = li.firstChild.nodeValue;
+          // var text = li.textContent;
+
+          if (text.startsWith('http://')) {
+            var linkElement = litl.createALink(text, text);
+
+            li.replaceChild(linkElement, li.firstChild);
+          }
+        }
+      },
+
+      createALink: function (text, link) {
+        var textElement = document.createTextNode(text);
+
+        var linkElement = document.createElement('a');
+        linkElement.setAttribute('href', link);
+        linkElement.appendChild(textElement);
+
+        return linkElement;
+      }
+    };
+
+    window.addEventListener('load', litl.init);
+  
+    </script>
+
+</body>
+</html>
