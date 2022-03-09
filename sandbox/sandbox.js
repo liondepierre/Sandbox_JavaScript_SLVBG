@@ -1,23 +1,23 @@
-//object literal
-const book1 = {
-    title: "Man in the Mirror",
-    DOP: 2004,
-    author: "Michael Jackson",
-    getsummary: function(){
-        return `${this.title} was written in ${this.DOP}` ;
+// class Student {
+//     name = "Yusuf";
+
+//     constructor(){
+//         this.age = 21;
+//     }
+
+//     greet(){
+//         console.log("my name is " + this.name + " and I am " + this.age + " years old");
+//     }
+// }
+
+function Person (){
+    this.name = "yusuf";
+    this.age = 21;
+    this.greet = function(){
+        console.log(this.name + " " + this.age);
     }
-};
-
-const book2 = {
-    title: "Ben hala rüyadayim",
-    DOP: 2004,
-    author: "Oguzhan Koc",
-    getsummary: function(){
-        return `${this.title} was written in ${this.DOP}` ;
-    }
-};
+}
 
 
-// console.log(book1.getsummary());
-console.log(Object.keys(book2));
-
+let student = new Student();
+student.greet();
