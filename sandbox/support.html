@@ -10,5 +10,19 @@
   <script src="sandbox.js"></script>
   <h1>Hello World</h1>
   
+
+  <div id="test">
+    <p> This is a test</p>
+  </div>
+  <button id="mybtn">Click to change </button>
+
+  <script>
+    $(document).ready(function(){
+      $("#mybtn").on("click", e=>{
+        $("test").load("data.txt");
+      });
+    });
+
+  </script>
 </body>
 </html>
